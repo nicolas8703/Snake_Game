@@ -24,19 +24,19 @@ public class GameTimer extends Thread{
     public void run(){
         while(running){
             try {
-                sleep(200);
+                sleep(collide.getSpeed());
                 snake.move();
                 snake.setWaitBeforMove(false);
                 collide.collideItem();
                 if(collide.collideItself()){
-                    snake.getTails().clear();
                     snake.setScore(0);
+                    snake.getTails().clear();
                 }
                 if(collide.collideWall()){
-                    snake.getTails().clear();
                     snake.setHeadX(7);
                     snake.setHeadY(7);
                     snake.setScore(0);
+                    snake.getTails().clear();
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();

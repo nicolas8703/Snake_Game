@@ -18,10 +18,10 @@ import java.awt.*;
 
 public class Gui {
 
-    private int width = 800;
+    private int width = 680;
     private int height = 600;
-    private int xoff = 130;
-    private int yoff = 20;
+    private int xoff = 20;
+    private int yoff = 25;
 
 
     public int getWidth() {

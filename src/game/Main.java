@@ -20,7 +20,7 @@ public class Main {
 
         Tail tail = new Tail();
         Item item = new Item();
-        Collide collide = new Collide(snake, tail, item);
+        Collide collide = new Collide(snake);
         GameTimer gT = new GameTimer(collide, snake);
 
         gT.start();

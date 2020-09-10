@@ -32,10 +32,10 @@ public class Draw extends JLabel {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
-        //Background
+        //Hintergrund
         g.setColor(Color.LIGHT_GRAY);
         g.fillRect(0,0, gui.getWidth(), gui.getHeight());
-        //Snake zeichnen
+        //Schlange
         g.setColor(Color.GREEN);
         Point point;
         for (int i = 0; i < snake.getTails().size(); i++) {
@@ -62,8 +62,8 @@ public class Draw extends JLabel {
         g.drawRect(gui.getXoff(),  gui.getYoff(), 512,512);
         //Score
         g.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        g.drawString("Highscore: " + snake.getHighscore(),660,60);
-        g.drawString("Score: " + snake.getScore(),660,40);
+        g.drawString("Highscore: " + snake.getHighscore(),550,60);
+        g.drawString("Score: " + snake.getScore(),550,40);
 
         repaint();
     }
